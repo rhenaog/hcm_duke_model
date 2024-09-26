@@ -62,7 +62,7 @@ class load_video_data(Dataset):
 		labels = []
 		prob_list = []
 
-		cases_path = '/storage/hj152-projects/DIHI_Echo/hj152_code/hcm_data/cases_' + train_val_test_flag + '_list.csv'
+		cases_path = '/data/cases_' + train_val_test_flag + '_list.csv'
 		with open(cases_path, 'r') as csvfile:
 			csvreader = csv.reader(csvfile)
 			for row in csvreader:
@@ -70,7 +70,7 @@ class load_video_data(Dataset):
 				prob_list.append(float(row[5]))
 				labels.append(1)
 
-		controls_path = '/storage/hj152-projects/DIHI_Echo/hj152_code/hcm_data/controls_' + train_val_test_flag + '_list.csv'
+		controls_path = '/data/controls_' + train_val_test_flag + '_list.csv'
 		with open(controls_path, 'r') as csvfile:
 			csvreader = csv.reader(csvfile)
 			for row in csvreader:
